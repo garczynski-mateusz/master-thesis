@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp">
+
+    <!-- Meal Name -->
+    <TextView
+        android:id="@+id/meal_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Meal Name"
+        android:textSize="14sp" />
+
+    <!-- Calories -->
+    <TextView
+        android:id="@+id/meal_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:paddingEnd="8dp" />
+
+    <!-- Magnifying Glass Icon -->
+    <ImageView
+        android:id="@+id/magnifying_glass_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_menu_search" />
+</LinearLayout>

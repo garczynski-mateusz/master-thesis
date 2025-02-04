@@ -1,0 +1,93 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- RecyclerView for Cart Items -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCartItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+        <!-- LinearLayout for Date Pickers (vertical alignment) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Start Date Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                android:textSize="16sp" />
+
+            <!-- DatePicker for Start Date -->
+            <DatePicker
+                android:id="@+id/datePickerStart"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:datePickerMode="spinner" />
+
+            <!-- End Date Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End Date"
+                android:textSize="16sp" />
+
+            <!-- DatePicker for End Date -->
+            <DatePicker
+                android:id="@+id/datePickerEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:datePickerMode="spinner" />
+
+        </LinearLayout>
+        <!-- Error message for invalid dates -->
+        <TextView
+            android:id="@+id/tvDateError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_red_dark"
+            android:visibility="gone"
+            android:text="Invalid date selection!" />
+
+        <TextView
+            android:id="@+id/tvTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Price: $0.00"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Additional Info Text Field (multi-line) -->
+        <EditText
+            android:id="@+id/etAdditionalInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Additional info"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:padding="8dp" />
+
+        <!-- Order Button -->
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order" />
+
+    </LinearLayout>
+</ScrollView>
